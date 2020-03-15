@@ -1,0 +1,38 @@
+﻿@model ZBeansApplication.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+<div>
+    <img src=@ViewData["ZBeansLogo"] class="logo-img" style="width: 200px; height: 100px" alt="Z Beans Logo">
+</div>
+
+<div style="display: inline-block">
+    <form class="form-group" asp-controller="Login" asp-action="Submit">
+        <div class="login-form">
+
+            <label asp-for="Username" class="control-label"></label>
+            <input asp-for="Username" class="form-control"/>
+        </div>
+
+        <div class="login-form">
+
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" type="password" class="form-control" />
+
+            <!--
+                <div class="d-flex">
+                    <button type="submit" class="btn btn-success">Login</button>
+                </div> 
+            -->
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-outline-dark">Employee Login</a>
+    <a asp-controller="Manager" asp-action="Index" class="btn btn-outline-dark">Manager Login</a>
+</div>
+
+

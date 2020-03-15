@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ZBeansApplication.Models.User>
+
+@{
+    ViewData["Title"] = "Employees";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>Employees</h2>
+
+<p>
+    <a asp-action="CreateEmployee">Create New</a>
+</p>
+<div class="container-fluid" style="overflow-y:auto">
+    <table class="table-bordered" width="1000">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID Number</th>
+                <th>Level of Experience</th>
+                <th>ServSafe Certified</th>
+                <th />
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FName</td>
+                    <td>@item.LName</td>
+                    <td>@item.ID</td>
+                    <td>@item.level.ToString()</td>
+                    <td>@item.ServSafeString()</td>
+                    <td>
+                        <a>Edit</a> | <a>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>

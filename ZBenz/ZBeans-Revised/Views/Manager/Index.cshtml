@@ -1,0 +1,17 @@
+﻿@model ZBeansApplication.Models.StoreListModel
+
+@{
+    ViewData["Title"] = "Store Select";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<div class="container-fluid">
+    <h2>@ViewData["Title"]</h2>
+    <h3>@ViewData["DateString"]</h3>
+
+
+    <div class="justify-content-center" id="content">
+        <a asp-controller="Manager" asp-action="Schedule">Mercer Village</a>
+    </div>
+</div>
+

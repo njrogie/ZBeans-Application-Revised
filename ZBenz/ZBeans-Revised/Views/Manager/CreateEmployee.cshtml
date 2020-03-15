@@ -1,0 +1,45 @@
+﻿@model ZBeansApplication.Models.User
+
+@{
+    ViewData["Title"] = "Create Employee";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>CreateEmployee</h2>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="StoreEmployeeData">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                <label asp-for="Username">Username: </label><input asp-for="Username" /><br />
+                <label asp-for="Password">Password: </label><input asp-for="Password" /><br />
+
+                <label asp-for="FName">First Name: </label><input asp-for="FName" /><br />
+                <label asp-for="LName">Last Name: </label><input asp-for="LName" /><br />
+                <label asp-for="Email">Email Address: </label><input asp-for="Email" /><br />
+
+
+                <label asp-for="ServSafe">ServSafe Certified: </label><input asp-for="ServSafe" /><br />
+
+
+                <label asp-for="DailyAvailibility[0]">Monday Availibility: </label><input asp-for="DailyAvailibility[0]" /><br />
+                <label asp-for="DailyAvailibility[1]">Tuesday Availibility: </label><input asp-for="DailyAvailibility[1]" /><br />
+                <label asp-for="DailyAvailibility[2]">Wednesday Availibility: </label><input asp-for="DailyAvailibility[2]" /><br />
+                <label asp-for="DailyAvailibility[3]">Thursday Availibility: </label><input asp-for="DailyAvailibility[3]" /><br />
+                <label asp-for="DailyAvailibility[4]">Friday Availibility: </label><input asp-for="DailyAvailibility[4]" /><br />
+                <label asp-for="DailyAvailibility[5]">Saturday Availibility: </label><input asp-for="DailyAvailibility[5]" /><br />
+                <label asp-for="DailyAvailibility[6]">Sunday Availibility: </label><input asp-for="DailyAvailibility[6]" /><br />
+
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Employees" class="btn btn-outline-dark">Back to List</a>
+</div>

@@ -1,0 +1,55 @@
+﻿@model ZBeansApplication.Models.WeekScheduleModel
+
+@{
+    ViewData["Title"] = "Schedule";
+    ViewData["DateString"] = Model.WeekOfString;
+    Layout = "~/Views/Shared/_LayoutEmployee.cshtml";
+}
+
+<div class="container-fluid">
+    <h2>@ViewData["Title"]</h2>
+    <h3>@ViewData["DateString"]</h3>
+</div>
+
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Time of Day
+            </th>
+            @foreach (string name in Enum.GetNames(typeof(ZBeansApplication.Models.WeekScheduleModel.Days)))
+            {
+                <th>@name</th>
+            }
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @for (int i = 0; i < 48; i++)
+        {
+            //First, see if we need to render the row.
+            if (Model.ShouldRender(i))
+            {
+                <tr>
+                    <td>@TimeSpan.FromMinutes(i * 30).ToString(@"hh\:mm")</td>
+
+                    @foreach (var ScheduleDay in Model.Week)
+                    {
+
+                        @if (!ScheduleDay.HalfHourSlots[i].validTimeSlot)
+                        {
+                            <td style="background-color:dimgrey"></td>
+                        }
+                        else
+                        {
+                            <td>@ScheduleDay.HalfHourSlots[i].employees.Count</td>
+                        }
+                    }
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
