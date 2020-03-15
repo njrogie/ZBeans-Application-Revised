@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@using ZBeans_Revised.Areas.Identity.Data
+@inject SignInManager<ZBeans_RevisedUser> SignInManager
+@inject UserManager<ZBeans_RevisedUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
