@@ -16,7 +16,8 @@ namespace ZBeans_Revised.Areas.Identity.Data
         public string LName { get; set; }
         [PersonalData]
         public bool ServSafe { get; set; } = false;
-        [PersonalData]
+        
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
         public string[] DailyAvailibility { get; set; } = new string[7];
 
         [PersonalData]
