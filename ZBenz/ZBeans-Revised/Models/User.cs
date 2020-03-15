@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 using System.ComponentModel.DataAnnotations;
 using static ZBeansApplication.Data.Enums;
@@ -12,9 +13,7 @@ namespace ZBeansApplication.Models
     public class User
     {
 
-        [Required]
-        public string Username { get; set; }
-
+ 
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; } 

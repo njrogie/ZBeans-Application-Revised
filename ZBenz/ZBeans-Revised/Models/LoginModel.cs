@@ -8,7 +8,7 @@ namespace ZBeansApplication.Models
     public class LoginModel
     {
 
-        public string Username;
+        public string Email;
         public string Password;
         public User UserData { get; set; }
 
