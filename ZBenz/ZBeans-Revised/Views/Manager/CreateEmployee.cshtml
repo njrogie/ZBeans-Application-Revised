@@ -24,7 +24,12 @@
 
 
                 <label asp-for="ServSafe">ServSafe Certified: </label><input asp-for="ServSafe" /><br />
-                <label asp-for="Role">Level (entry, experienced, or manager): </label><input asp-for="Role"/><br/>
+
+                <p>Employee Level:</p>
+                <input type="radio" value="Entry" id="Elevel" name="Elevel" />Entry<br />
+                <input type="radio" value="Experienced" id="Elevel" name="Elevel" />Experienced<br />
+                <input type="radio" value="Manager" id="Elevel" name="Elevel" />Manager<br />
+
 
                 <label asp-for="DailyAvailibility[0]">Monday Availibility: </label><input asp-for="DailyAvailibility[0]" /><br />
                 <label asp-for="DailyAvailibility[1]">Tuesday Availibility: </label><input asp-for="DailyAvailibility[1]" /><br />

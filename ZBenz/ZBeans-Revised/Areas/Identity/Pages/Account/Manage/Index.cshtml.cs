@@ -49,7 +49,9 @@ namespace ZBeans_Revised.Areas.Identity.Pages.Account.Manage
             [DataType(DataType.Text)]
             [Display(Name = "Daily Availibility")]
             public string[] DailyAvailibility { get; set; } = new string[7];
-
+            [Required]
+            [DataType(DataType.Text)]
+            public Employee
             [Required]
             [Display(Name = "Employee Level")]
             public ZBeans_RevisedUser.EmployeeLevel level = ZBeans_RevisedUser.EmployeeLevel.Entry;
@@ -68,7 +70,7 @@ namespace ZBeans_Revised.Areas.Identity.Pages.Account.Manage
                 LName = user.LName,
                 ServSafe = user.ServSafe,
                 DailyAvailibility = user.DailyAvailibility,
-                level = user.level
+                Elevel = user.Elevel
             };
         }
 

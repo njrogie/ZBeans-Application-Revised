@@ -21,7 +21,11 @@ namespace ZBeans_Revised.Areas.Identity.Data
         public string[] DailyAvailibility { get; set; } = new string[7];
 
         [PersonalData]
-        public EmployeeLevel level = EmployeeLevel.Entry;
+        public EmployeeLevel Elevel { get; set; }
+
+        
+
+  
         //public IWeek WeekSchedule 
 
 
