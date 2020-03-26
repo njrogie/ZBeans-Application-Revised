@@ -52,7 +52,7 @@ namespace ZBeans_Revised.Areas.Identity.Pages.Account.Manage
            
             [Required]
             [Display(Name = "Employee Level")]
-            public ZBeans_RevisedUser.EmployeeLevel Elevel = ZBeans_RevisedUser.EmployeeLevel.Entry;
+            public ZBeans_RevisedUser.EmployeeLevel Elevel { get; set; }
         }
 
         private async Task LoadAsync(ZBeans_RevisedUser user)

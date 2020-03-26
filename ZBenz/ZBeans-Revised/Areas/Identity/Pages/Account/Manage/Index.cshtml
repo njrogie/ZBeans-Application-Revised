@@ -27,7 +27,11 @@
                 <input asp-for="Input.ServSafe" class="form-control" />
                 <span asp-validation-for="Input.ServSafe" class="text-danger"></span>
 
-                
+                <p>Employee Level:</p>
+                <input type="radio" value="Entry" id="Elevel" name="Elevel" />Entry<br />
+                <input type="radio" value="Experienced" id="Elevel" name="Elevel" />Experienced<br />
+                <input type="radio" value="Manager" id="Elevel" name="Elevel" />Manager<br />
+
             </div>
             <button id="update-profile-button" type="submit" class="btn btn-primary">Save</button>
         </form>
