@@ -32,6 +32,9 @@ namespace ZBeansApplication.Models
         [Required]
         public string[] DailyAvailibility { get; set; } = new string[7];
 
+        [Required]
+        public string Role { get; set; }
+
 
         public EmployeeLevel level = EmployeeLevel.Entry;
         //public IWeek WeekSchedule 
