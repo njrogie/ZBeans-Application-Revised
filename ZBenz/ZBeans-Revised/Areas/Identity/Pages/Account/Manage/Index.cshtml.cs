@@ -49,12 +49,10 @@ namespace ZBeans_Revised.Areas.Identity.Pages.Account.Manage
             [DataType(DataType.Text)]
             [Display(Name = "Daily Availibility")]
             public string[] DailyAvailibility { get; set; } = new string[7];
-            [Required]
-            [DataType(DataType.Text)]
-            public Employee
+           
             [Required]
             [Display(Name = "Employee Level")]
-            public ZBeans_RevisedUser.EmployeeLevel level = ZBeans_RevisedUser.EmployeeLevel.Entry;
+            public ZBeans_RevisedUser.EmployeeLevel Elevel = ZBeans_RevisedUser.EmployeeLevel.Entry;
         }
 
         private async Task LoadAsync(ZBeans_RevisedUser user)
